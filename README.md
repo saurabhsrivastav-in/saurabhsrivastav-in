@@ -47,7 +47,6 @@ Leveraging deep expertise in **SAP FICO, RPA, and GenAI**, I have a proven track
 * **The Result:** Enabled 60% faster cash application and automated ESG-based risk profiling for global debtors.
 
 **[Explore Repository](https://github.com/saurabhsrivastav-in/SmartCash-AI) | [Live Demo](https://smartcash-ai-csjcpzt5x3lbimlnuwbnvp.streamlit.app/)**
-** [Live Demo - C-Suite](https://smartcash-ai-csjcpzt5x3lbimlnuwbnvp.streamlit.app/)**
 
 ### **2. Gatekeeper Auth: Regional Governance & Access Automation**
 * **The Problem:** Manual approval fragmentation caused 72-hour provisioning delays and "Privilege Creep" risks.
