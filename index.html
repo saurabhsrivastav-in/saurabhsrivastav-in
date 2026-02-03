@@ -28,17 +28,11 @@
     </script>
 
     <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; line-height: 1.6; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .bcg-gradient { background: linear-gradient(135deg, #004533 0%, #002b20 100%); }
         .section-heading { font-family: 'Playfair Display', serif; }
-        .nav-link { position: relative; transition: 0.3s; }
-        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: #9e8b56; transition: 0.3s; }
-        .nav-link:hover::after { width: 100%; }
         .card-hover { transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); border-left: 4px solid transparent; }
         .card-hover:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left: 4px solid #9e8b56; background: white; }
-        header { backdrop-filter: blur(12px); }
-        .bullet-point { margin-bottom: 0.75rem; position: relative; padding-left: 1.5rem; }
-        .bullet-point::before { content: "→"; position: absolute; left: 0; color: #9e8b56; font-weight: bold; }
     </style>
 </head>
 <body class="bg-bcgBeige text-slate-900">
@@ -49,249 +43,159 @@
                 <div class="w-8 h-8 bg-bcgGreen flex items-center justify-center text-white font-bold text-xs">SS</div>
                 <span class="text-xl font-bold tracking-tighter text-bcgGreen section-heading uppercase">Saurabh Srivastav</span>
             </div>
-            
-            <div class="hidden md:flex space-x-10 font-medium text-xs uppercase tracking-[0.2em] text-slate-600">
-                <a href="#home" class="nav-link hover:text-bcgGreen">Executive Summary</a>
-                <a href="#experience" class="nav-link hover:text-bcgGreen">Experience</a>
-                <a href="#capabilities" class="nav-link hover:text-bcgGreen">Expertise Grid</a>
-                <a href="#education" class="nav-link hover:text-bcgGreen">Education</a>
-                <a href="#leadership" class="nav-link hover:text-bcgGreen">Leadership</a>
+            <div class="hidden md:flex space-x-6 font-medium text-[10px] uppercase tracking-[0.2em] text-slate-600">
+                <a href="#experience" class="hover:text-bcgGreen">Experience</a>
+                <a href="#skills" class="hover:text-bcgGreen">Capabilities</a>
+                <a href="#education" class="hover:text-bcgGreen">Education</a>
+                <a href="#leadership" class="hover:text-bcgGreen">Honors</a>
             </div>
-
-            <div class="hidden md:flex items-center space-x-4">
-                <a href="mailto:saurabhsrivastav.db@gmail.com" class="bg-bcgGreen border border-bcgGreen text-white px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-transparent hover:text-bcgGreen transition">Contact Me</a>
-            </div>
+            <a href="mailto:saurabhsrivastav.db@gmail.com" class="bg-bcgGreen text-white px-5 py-2 text-[10px] font-bold uppercase tracking-widest hover:bg-bcgGold transition">Contact</a>
         </nav>
     </header>
 
-    <section id="home" class="min-h-screen flex items-center pt-20 bcg-gradient text-white relative overflow-hidden">
-        <div class="absolute right-0 bottom-0 opacity-10 pointer-events-none">
-            <i class="fas fa-chart-line text-[40rem] -mr-40 -mb-40 text-white"></i>
-        </div>
-        <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-bcgGold font-bold uppercase tracking-[0.3em] text-sm mb-4">Business Analyst | Product Leader</h2>
-                <h1 class="text-5xl md:text-7xl section-heading mb-6 leading-tight">
-                    Optimizing Value via <span class="italic text-bcgGold">Strategic Intelligence</span>.
-                </h1>
-                <p class="text-xl text-slate-300 mb-10 max-w-lg leading-relaxed font-light">
-                    Business Analyst with 5+ years of global experience driving product lifecycles, defining roadmaps, and delivering customer-centric solutions. 
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="https://www.linkedin.com/in/saurabh-srivastav-in/" target="_blank" class="bg-bcgGold text-white px-10 py-4 font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-bcgGreen transition shadow-lg">
-                        <i class="fab fa-linkedin mr-2"></i> LinkedIn
-                    </a>
-                    <a href="https://github.com/saurabhsrivastav-in" target="_blank" class="border border-white/30 text-white px-10 py-4 font-bold uppercase text-xs tracking-widest hover:bg-white/10 transition">
-                        <i class="fab fa-github mr-2"></i> GitHub
-                    </a>
-                </div>
-            </div>
-            <div class="bg-white/5 p-8 border border-white/10 backdrop-blur-sm">
-                <h3 class="text-bcgGold font-bold uppercase text-xs tracking-widest mb-6">Professional Summary</h3>
-                <p class="text-sm text-slate-200 leading-relaxed mb-4">
-                    Skilled in market analysis, business case development, and cross-functional collaboration with engineering and business teams. Proven track record of launching impactful products.
-                </p>
-                <div class="grid grid-cols-2 gap-4 text-[10px] uppercase tracking-widest font-bold">
-                    <div class="flex items-center"><i class="fas fa-check text-bcgGold mr-2"></i> Global Delivery</div>
-                    <div class="flex items-center"><i class="fas fa-check text-bcgGold mr-2"></i> Product Roadmap</div>
-                    <div class="flex items-center"><i class="fas fa-check text-bcgGold mr-2"></i> Agile Execution</div>
-                    <div class="flex items-center"><i class="fas fa-check text-bcgGold mr-2"></i> Stakeholder ROI</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="capabilities" class="py-24 bg-white border-b border-slate-100">
+    <section id="home" class="min-h-[70vh] flex items-center pt-24 bcg-gradient text-white relative">
         <div class="max-w-7xl mx-auto px-8">
-            <h2 class="text-center text-bcgGold font-bold uppercase tracking-[0.4em] text-xs mb-16">Expertise Taxonomy</h2>
-            <div class="grid md:grid-cols-3 gap-12">
-                <div>
-                    <h4 class="font-bold text-bcgGreen uppercase text-sm mb-6 border-b-2 border-bcgGold pb-2">Core Competencies</h4>
-                    <ul class="text-xs space-y-3 text-slate-600 font-medium">
-                        <li>PRODUCT STRATEGY & ROADMAP OWNERSHIP</li>
-                        <li>AGILE DELIVERY & SCRUM METHODOLOGY</li>
-                        <li>REQUIREMENT GATHERING & DISCOVERY</li>
-                        <li>PRODUCT BACKLOG REFINEMENT</li>
-                        <li>MARKET ANALYSIS & BUSINESS ACUMEN</li>
-                        <li>TECHNICAL SPECIFICATIONS DEVELOPMENT</li>
-                        <li>STAKEHOLDER ENGAGEMENT & COLLABORATION</li>
-                        <li>ENGINEERING COLLABORATION</li>
-                        <li>PROBLEM SOLVING & ROOT CAUSE ANALYSIS</li>
-                        <li>WIREFRAMING & PRODUCT SENSE</li>
-                        <li>VOICE OF CUSTOMER (VOC)</li>
-                    </ul>
+            <h2 class="text-bcgGold font-bold uppercase tracking-[0.3em] text-sm mb-4">Business Analyst | 5+ Years Experience</h2>
+            <h1 class="text-5xl md:text-7xl section-heading mb-6 leading-tight">Saurabh <span class="italic text-bcgGold">Srivastav</span></h1>
+            <p class="text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed">Driving product lifecycles and customer-centric solutions through market analysis, business case development, and cross-functional leadership.</p>
+            <div class="flex gap-4 text-xs font-bold tracking-widest uppercase">
+                <span><i class="fas fa-phone mr-2"></i> +91 7786803262</span>
+                <span><i class="fas fa-envelope mr-2"></i> saurabhsrivastav.db@gmail.com</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 px-8 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-bcgGold font-bold uppercase tracking-widest text-xs mb-10 text-center">Core Expertise & Technical Stack</h3>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="space-y-2">
+                    <h4 class="font-bold text-bcgGreen text-xs uppercase border-b border-bcgGold/20 pb-2">Strategic</h4>
+                    <p class="text-xs text-slate-600">Product Strategy, Roadmap Ownership, Market Analysis, Business Case Development, Product Discovery</p>
                 </div>
-                <div>
-                    <h4 class="font-bold text-bcgGreen uppercase text-sm mb-6 border-b-2 border-bcgGold pb-2">Analytical & Technical</h4>
-                    <ul class="text-xs space-y-3 text-slate-600 font-medium">
-                        <li>ERP SYSTEMS (SAP FINANCE & CONTROLLING)</li>
-                        <li>POWER BI & DATA VISUALIZATION</li>
-                        <li>JIRA & CONFLUENCE (ATLASSIAN)</li>
-                        <li>SERVICENOW (ITSM)</li>
-                        <li>SMARTSHEET & PROJECT MANAGEMENT</li>
-                        <li>MS OFFICE SUITE (EXCEL, PPT, TEAMS)</li>
-                        <li>MS VISIO & BPMN WORKFLOWS</li>
-                        <li>KANBAN METHODOLOGY</li>
-                        <li>SAP FI INTEGRATION (MM/SD/SHAREPOINT)</li>
-                        <li>RPA AUTOMATION STRATEGY</li>
-                    </ul>
+                <div class="space-y-2">
+                    <h4 class="font-bold text-bcgGreen text-xs uppercase border-b border-bcgGold/20 pb-2">Operational</h4>
+                    <p class="text-xs text-slate-600">Agile Delivery, Requirement Gathering, Backlog Refinement, Technical Specifications, Stakeholder Engagement</p>
                 </div>
-                <div>
-                    <h4 class="font-bold text-bcgGreen uppercase text-sm mb-6 border-b-2 border-bcgGold pb-2">Business Domains</h4>
-                    <ul class="text-xs space-y-3 text-slate-600 font-medium">
-                        <li>FINANCIAL WORKFLOW AUTOMATION</li>
-                        <li>PROCURE-TO-PAY (P2P) OPTIMIZATION</li>
-                        <li>GLOBAL PRODUCT LOCALIZATION</li>
-                        <li>AUDIT COMPLIANCE & RISK REDUCTION</li>
-                        <li>INVOICE EFFICIENCY & SYSTEM DESIGN</li>
-                        <li>BUILD-VS-BUY ANALYSIS</li>
-                        <li>UAT & CHANGE MANAGEMENT</li>
-                        <li>SAP USER ADMINISTRATION (4,400+ USERS)</li>
-                    </ul>
+                <div class="space-y-2">
+                    <h4 class="font-bold text-bcgGreen text-xs uppercase border-b border-bcgGold/20 pb-2">Technical</h4>
+                    <p class="text-xs text-slate-600">SAP FICO, Power BI, Jira, Confluence, ServiceNow, Smartsheet, MS Visio, BPMN, SQL, Gen AI for Leaders</p>
+                </div>
+                <div class="space-y-2">
+                    <h4 class="font-bold text-bcgGreen text-xs uppercase border-b border-bcgGold/20 pb-2">Analysis</h4>
+                    <p class="text-xs text-slate-600">Gap Analysis, Build-vs-Buy, Root Cause Analysis, UAT, Change Management, Lean Six Sigma Green Belt</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-32 px-8">
+    <section id="experience" class="py-24 px-8">
         <div class="max-w-5xl mx-auto">
-            <div class="mb-20">
-                <h2 class="text-bcgGold font-bold uppercase tracking-[0.3em] text-xs mb-4">Professional Record</h2>
-                <h3 class="text-4xl section-heading text-bcgGreen">Strategic Impact & Global Delivery</h3>
-            </div>
+            <h3 class="text-3xl section-heading text-bcgGreen mb-16">Professional Experience</h3>
 
-            <div class="mb-20 card-hover p-10 rounded-lg bg-white shadow-sm border border-slate-100">
-                <div class="flex flex-col md:flex-row justify-between mb-8 border-b border-slate-100 pb-6">
+            <div class="mb-16 card-hover p-8 rounded-lg">
+                <div class="flex justify-between items-start mb-6">
                     <div>
-                        <h4 class="text-2xl font-bold text-bcgGreen">Business Analyst (Client: CBRE Digital & Technology)</h4>
-                        <p class="text-bcgGold font-bold text-lg">Algoleap Technologies | Hyderabad, India</p>
+                        <h4 class="text-xl font-bold text-bcgGreen">Business Analyst (Client: CBRE)</h4>
+                        <p class="text-bcgGold font-semibold">Algoleap Technologies | Hyderabad | Oct 2024 – Present</p>
                     </div>
-                    <div class="text-slate-400 font-bold text-sm mt-2 md:mt-0 uppercase tracking-widest">Oct 2024 — Present</div>
                 </div>
-                <div class="space-y-4 text-slate-700">
-                    <div class="bullet-point">Defined and owned roadmap for 25+ product features, translating market requirements into user stories and technical specifications, driving agile execution across engineering teams.</div>
-                    <div class="bullet-point">Localized processes across APAC, aligning system design with compliance, boosting satisfaction scores and reducing turnaround by 35%, generating $400K+ revenue.</div>
-                    <div class="bullet-point">Partnered with engineering and product development teams to deliver new functionality, improving transparency and operational efficiency.</div>
-                    <div class="bullet-point">Led onboarding for the Spain market: migrated 500K records, coordinated 150+ stakeholders, achieving 98% invoice efficiency improvement.</div>
-                    <div class="bullet-point">Streamlined role-based access across APAC & EMEA, reducing audit risks and strengthening compliance.</div>
-                    <div class="bullet-point">Optimized UX workflows and reduced incident recurrence by 30%, resolving 1000+ incidents through structured prioritization and root cause analysis.</div>
-                </div>
+                <ul class="space-y-2 text-sm text-slate-600 list-disc ml-5">
+                    <li>Defined and owned roadmap for 25+ product features, translating market requirements into user stories and technical specifications.</li>
+                    <li>Localized processes across APAC, aligning system design with compliance, boosting satisfaction and reducing turnaround by 35% ($400K+ revenue).</li>
+                    <li>Partnered with engineering and product development teams to deliver new functionality and improve transparency.</li>
+                    <li>Led onboarding for Spain market: migrated 500K records, coordinated 150+ stakeholders, achieving 98% invoice efficiency improvement.</li>
+                    <li>Streamlined role-based access across APAC & EMEA, reducing audit risks and strengthening compliance.</li>
+                    <li>Optimized UX workflows and reduced incident recurrence by 30%, resolving 1000+ incidents via RCA.</li>
+                </ul>
             </div>
 
-            <div class="mb-20 card-hover p-10 rounded-lg bg-white shadow-sm border border-slate-100">
-                <div class="flex flex-col md:flex-row justify-between mb-8 border-b border-slate-100 pb-6">
+            <div class="mb-16 card-hover p-8 rounded-lg">
+                <div class="flex justify-between items-start mb-6">
                     <div>
-                        <h4 class="text-2xl font-bold text-bcgGreen">Business Analyst</h4>
-                        <p class="text-bcgGold font-bold text-lg">ArcelorMittal | Luxembourg & India</p>
+                        <h4 class="text-xl font-bold text-bcgGreen">Business Analyst</h4>
+                        <p class="text-bcgGold font-semibold">ArcelorMittal | Luxembourg & India | Feb 2023 – Apr 2024</p>
                     </div>
-                    <div class="text-slate-400 font-bold text-sm mt-2 md:mt-0 uppercase tracking-widest">Feb 2023 — Apr 2024</div>
                 </div>
-                <div class="space-y-4 text-slate-700">
-                    <div class="bullet-point">Conducted market research and stakeholder workshops to define product requirements, enabling 95% on-time delivery of prioritized backlog items.</div>
-                    <div class="bullet-point">Developed business cases and performed build-vs-buy analysis, delivering €400K upfront savings and identifying €60K annual savings opportunities.</div>
-                    <div class="bullet-point">Supported product positioning and adoption through UAT and change management, achieving 95% user adoption and 99% system uptime.</div>
-                    <div class="bullet-point">Reduced contract cycle time by 10% and improved resource allocation by 12% through financial and capacity analysis.</div>
-                    <div class="bullet-point">Strengthened compliance and delivered training/documentation to drive adoption of new processes.</div>
-                </div>
+                <ul class="space-y-2 text-sm text-slate-600 list-disc ml-5">
+                    <li>Conducted market research and workshops to define requirements, enabling 95% on-time delivery of prioritized backlog.</li>
+                    <li>Developed business cases and performed build-vs-buy analysis, delivering €400K upfront savings and €60K annual savings.</li>
+                    <li>Supported product positioning and adoption through UAT and change management (95% adoption, 99% uptime).</li>
+                    <li>Reduced contract cycle time by 10% and improved resource allocation by 12% via financial/capacity analysis.</li>
+                    <li>Strengthened compliance and delivered training/documentation to drive adoption of new processes.</li>
+                </ul>
             </div>
 
-            <div class="mb-20 card-hover p-10 rounded-lg bg-white shadow-sm border border-slate-100">
-                <div class="flex flex-col md:flex-row justify-between mb-8 border-b border-slate-100 pb-6">
+            <div class="mb-16 card-hover p-8 rounded-lg">
+                <div class="flex justify-between items-start mb-6">
                     <div>
-                        <h4 class="text-2xl font-bold text-bcgGreen">Business Analyst</h4>
-                        <p class="text-bcgGold font-bold text-lg">West End Digital Solutions | Mumbai, India</p>
+                        <h4 class="text-xl font-bold text-bcgGreen">Business Analyst</h4>
+                        <p class="text-bcgGold font-semibold">West End Digital Solutions | Mumbai | Sep 2022 – Jan 2023</p>
                     </div>
-                    <div class="text-slate-400 font-bold text-sm mt-2 md:mt-0 uppercase tracking-widest">Sep 2022 — Jan 2023</div>
                 </div>
-                <div class="space-y-4 text-slate-700">
-                    <div class="bullet-point">Analyzed Procure-to-Pay workflows, improving procurement and supplier payment cycles by 25%.</div>
-                    <div class="bullet-point">Conducted gap analysis to reduce bottlenecks and compliance risks, ensuring smooth product delivery.</div>
-                    <div class="bullet-point">Validated application updates through rigorous testing, maintaining performance standards.</div>
-                </div>
+                <ul class="space-y-2 text-sm text-slate-600 list-disc ml-5">
+                    <li>Analyzed Procure-to-Pay workflows, improving procurement and supplier payment cycles by 25%.</li>
+                    <li>Conducted gap analysis to reduce bottlenecks and compliance risks, ensuring smooth product delivery.</li>
+                    <li>Validated application updates through rigorous testing, maintaining performance standards.</li>
+                </ul>
             </div>
 
-            <div class="mb-20 card-hover p-10 rounded-lg bg-white shadow-sm border border-slate-100">
-                <div class="flex flex-col md:flex-row justify-between mb-8 border-b border-slate-100 pb-6">
+            <div class="mb-16 card-hover p-8 rounded-lg">
+                <div class="flex justify-between items-start mb-6">
                     <div>
-                        <h4 class="text-2xl font-bold text-bcgGreen">Functional Consultant – SAP Finance & Controlling</h4>
-                        <p class="text-bcgGold font-bold text-lg">AM/NS India | Surat, India</p>
+                        <h4 class="text-xl font-bold text-bcgGreen">Functional Consultant – SAP Finance & Controlling</h4>
+                        <p class="text-bcgGold font-semibold">AM/NS India | Surat | Jul 2020 – Aug 2022</p>
                     </div>
-                    <div class="text-slate-400 font-bold text-sm mt-2 md:mt-0 uppercase tracking-widest">Jul 2020 — Aug 2022</div>
                 </div>
-                <div class="space-y-4 text-slate-700">
-                    <div class="bullet-point">Partnered with engineering teams to automate invoice approvals, reducing manual processing by 60% and accelerating month-end close.</div>
-                    <div class="bullet-point">Delivered RPA automation projects, cutting intervention by 40% and boosting operational effectiveness.</div>
-                    <div class="bullet-point">Streamlined finance workflows, reducing turnaround times by 25% through 20+ change requests.</div>
-                    <div class="bullet-point">Integrated SAP FI with MM/SD and third-party systems (Tableau, SharePoint), enabling seamless data flow and improved reporting.</div>
-                    <div class="bullet-point">Strengthened compliance, reducing audit findings by 30% across multiple regions.</div>
-                    <div class="bullet-point">Administered and safeguarded permissions for 4,400+ SAP users, ensuring compliance and secure financial operations.</div>
-                </div>
+                <ul class="space-y-2 text-sm text-slate-600 list-disc ml-5">
+                    <li>Partnered with engineering to automate invoice approvals, reducing manual processing by 60%.</li>
+                    <li>Delivered RPA automation projects, cutting intervention by 40% and boosting effectiveness.</li>
+                    <li>Streamlined finance workflows, reducing turnaround times by 25% through 20+ change requests.</li>
+                    <li>Integrated SAP FI with MM/SD and third-party systems (Tableau, SharePoint) for seamless data flow.</li>
+                    <li>Strengthened compliance, reducing audit findings by 30% across multiple regions.</li>
+                    <li>Administered and safeguarded permissions for 4,400+ SAP users.</li>
+                </ul>
             </div>
 
-            <div class="mt-32">
-                <h3 class="text-3xl section-heading text-bcgGreen mb-12">Academic Internships</h3>
-                
-                <div class="mb-12 p-8 border-l-4 border-bcgGold bg-white">
-                    <div class="flex justify-between mb-4">
-                        <h4 class="font-bold text-xl text-bcgGreen">Tech Mahindra Ltd. (Associate Project Trainee)</h4>
-                        <span class="text-xs font-bold text-slate-400">Jun 2019 - Nov 2019</span>
-                    </div>
-                    <p class="text-bcgGold font-bold text-sm mb-4">Global Sales - Large Deals | Noida, India</p>
-                    <ul class="text-sm space-y-2 text-slate-600">
-                        <li class="bullet-point">Supported large deal sales operations, managing INR 45M opportunities and contracts.</li>
-                        <li class="bullet-point">Conducted credential mapping for AI Bot development and enhanced proposal generation tools to streamline documentation.</li>
-                    </ul>
+            <h3 class="text-2xl section-heading text-bcgGreen mt-20 mb-10 uppercase tracking-widest">Internships</h3>
+            <div class="grid md:grid-cols-2 gap-8 mb-20">
+                <div class="p-6 border border-slate-200 rounded-lg">
+                    <h4 class="font-bold text-bcgGreen">Tech Mahindra Ltd.</h4>
+                    <p class="text-xs text-bcgGold mb-2">Jun 2019 – Nov 2019 | Associate Project Trainee</p>
+                    <p class="text-xs text-slate-600">Managed INR 45M opportunities. Credential mapping for AI Bot development and proposal tools.</p>
                 </div>
-
-                <div class="mb-12 p-8 border-l-4 border-bcgGold bg-white">
-                    <div class="flex justify-between mb-4">
-                        <h4 class="font-bold text-xl text-bcgGreen">Tech Mahindra Ltd. (Associate Project Trainee)</h4>
-                        <span class="text-xs font-bold text-slate-400">Jun 2017 - Jun 2017</span>
-                    </div>
-                    <p class="text-bcgGold font-bold text-sm mb-4">Global Sales - Large Deals | Noida, India</p>
-                    <ul class="text-sm space-y-2 text-slate-600">
-                        <li class="bullet-point">Managed contracts for 200+ companies and 3,600+ customers.</li>
-                        <li class="bullet-point">Supported bid automation and prepared GST/RFP sheets for 60 smart city projects.</li>
-                    </ul>
+                <div class="p-6 border border-slate-200 rounded-lg">
+                    <h4 class="font-bold text-bcgGreen">Tech Mahindra Ltd.</h4>
+                    <p class="text-xs text-bcgGold mb-2">Jun 2017 – Jun 2017 | Associate Project Trainee</p>
+                    <p class="text-xs text-slate-600">Managed contracts for 200+ companies. Prepared GST/RFP sheets for 60 smart city projects.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="education" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-8">
-            <h3 class="text-3xl section-heading text-bcgGreen mb-16 text-center">Education & Scholastic Record</h3>
+    <section id="education" class="py-24 px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-3xl section-heading text-bcgGreen mb-12">Academic Credentials</h3>
             <div class="grid md:grid-cols-2 gap-12">
-                <div class="p-10 bg-bcgBeige rounded-lg border border-slate-100">
-                    <h4 class="font-bold text-bcgGreen text-xl mb-2">Master of Business Administration (MBA)</h4>
-                    <p class="text-bcgGold font-bold mb-4">Marketing & Operations Management</p>
-                    <p class="text-sm text-slate-600 mb-6">Dayalbagh Educational Institute | Agra, India</p>
-                    <div class="flex justify-between items-center border-t border-slate-200 pt-4">
-                        <span class="text-xs font-bold uppercase tracking-widest text-slate-500">Jul 2018 - May 2020</span>
-                        <span class="bg-bcgGreen text-white px-4 py-1 text-xs font-bold">GPA: 8.11 / 10.00</span>
+                <div class="space-y-8">
+                    <div class="border-l-4 border-bcgGold pl-6">
+                        <h4 class="font-bold text-lg text-bcgGreen">Master of Business Administration (MBA)</h4>
+                        <p class="text-sm text-slate-600">Marketing & Operations Management | Dayalbagh Educational Institute</p>
+                        <p class="text-xs text-bcgGold font-bold">2018 – 2020 | GPA: 8.11 / 10.00</p>
+                    </div>
+                    <div class="border-l-4 border-bcgGold pl-6">
+                        <h4 class="font-bold text-lg text-bcgGreen">Bachelor of Business Administration (BBA)</h4>
+                        <p class="text-sm text-slate-600">Business Administration & Management | Dayalbagh Educational Institute</p>
+                        <p class="text-xs text-bcgGold font-bold">2015 – 2018 | GPA: 8.06 / 10.00</p>
                     </div>
                 </div>
-                <div class="p-10 bg-bcgBeige rounded-lg border border-slate-100">
-                    <h4 class="font-bold text-bcgGreen text-xl mb-2">Bachelor of Business Administration (BBA)</h4>
-                    <p class="text-bcgGold font-bold mb-4">Business Administration & Management</p>
-                    <p class="text-sm text-slate-600 mb-6">Dayalbagh Educational Institute | Agra, India</p>
-                    <div class="flex justify-between items-center border-t border-slate-200 pt-4">
-                        <span class="text-xs font-bold uppercase tracking-widest text-slate-500">Jul 2015 - May 2018</span>
-                        <span class="bg-bcgGreen text-white px-4 py-1 text-xs font-bold">GPA: 8.06 / 10.00</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-16 p-10 bg-bcgGreen text-white rounded-lg">
-                <h4 class="font-bold uppercase tracking-widest text-xs text-bcgGold mb-8">Research & Academic Projects</h4>
-                <div class="grid md:grid-cols-2 gap-8 text-sm opacity-90">
-                    <ul class="space-y-4">
-                        <li class="flex items-start"><i class="fas fa-microscope text-bcgGold mr-4 mt-1"></i> FMCG Industry: In-depth market trend analysis and competitive positioning.</li>
-                        <li class="flex items-start"><i class="fas fa-users text-bcgGold mr-4 mt-1"></i> Social Media Influence: Quantitative study on youth behavioral patterns.</li>
-                    </ul>
-                    <ul class="space-y-4">
-                        <li class="flex items-start"><i class="fas fa-handshake text-bcgGold mr-4 mt-1"></i> New Product Alliances: Frameworks for strategic product development.</li>
-                        <li class="flex items-start"><i class="fas fa-shopping-cart text-bcgGold mr-4 mt-1"></i> Customer Behavior: Analytical comparison of online vs in-store shopping.</li>
+                <div class="bg-bcgBeige p-8 rounded-lg">
+                    <h4 class="font-bold text-bcgGreen uppercase text-xs tracking-widest mb-4">Research & Academic Projects</h4>
+                    <ul class="text-xs space-y-3 text-slate-600 list-disc ml-4">
+                        <li>FMCG Industry Analysis: Market trends and competitive landscape.</li>
+                        <li>Social Media Influence: Impact of digital platforms on youth demographics.</li>
+                        <li>New Product Development: Alliances and strategic frameworks.</li>
+                        <li>Consumer Behaviour: Comparative study of Online vs. In-store shopping habits.</li>
                     </ul>
                 </div>
             </div>
@@ -300,75 +204,52 @@
 
     <section id="leadership" class="py-24 px-8">
         <div class="max-w-7xl mx-auto">
-            <h3 class="text-3xl section-heading text-bcgGreen mb-16">Leadership, Awards & Global Engagement</h3>
+            <h3 class="text-3xl section-heading text-bcgGreen mb-12">Honors, Leadership & Global Forums</h3>
             
-            <div class="grid md:grid-cols-2 gap-16">
-                <div class="space-y-8">
-                    <div class="card-hover p-6 bg-white border border-slate-100">
-                        <h4 class="font-bold text-bcgGreen uppercase text-xs tracking-widest mb-4">Key Leadership Roles</h4>
-                        <ul class="text-sm space-y-4 text-slate-600">
-                            <li><strong>Placement Coordinator, MBA (2018–2020):</strong> Streamlined recruiter engagement for 117 students.</li>
-                            <li><strong>Class Representative (BBA & MBA, 2015–2020):</strong> Liaison between faculty and peers; managed academic initiatives.</li>
-                            <li><strong>Event Leadership:</strong> Lead for EPIC 2019 - Tech Mahindra, Career Expedition, Alumni Meet, and Guest Lectures.</li>
-                            <li><strong>Process Impact:</strong> Delivered savings of 6 FTE and INR 30L automation; reduced SAP HR-FI cycle by 3 man-days/month.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="card-hover p-6 bg-white border border-slate-100">
-                        <h4 class="font-bold text-bcgGreen uppercase text-xs tracking-widest mb-4">Certifications</h4>
-                        <div class="grid grid-cols-1 gap-2 text-xs font-bold text-slate-600">
-                            <p>• Lean Six Sigma Green Belt - PPDC Agra</p>
-                            <p>• Design Thinking - HP Life</p>
-                            <p>• Business Analysis Fundamentals - Udemy</p>
-                            <p>• Gen AI for Leaders - Udemy</p>
-                            <p>• Introduction to Cybersecurity - Cisco</p>
-                        </div>
-                    </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="space-y-6">
+                    <h4 class="font-bold text-bcgGold uppercase text-xs tracking-widest">Awards & Recognition</h4>
+                    <ul class="text-xs space-y-2 text-slate-600">
+                        <li>• CBRE SPOT Award (Global coordination)</li>
+                        <li>• AM/NS Recognition for RPA Automation</li>
+                        <li>• HP Life Ambassador</li>
+                        <li>• Dale Carnegie Digital Leadership Badge</li>
+                        <li>• ICCE & UNFCCC Green Revolution Cert</li>
+                        <li>• NSS & Army NCC Certifications</li>
+                    </ul>
                 </div>
-
-                <div class="space-y-8">
-                    <div class="card-hover p-6 bg-white border border-slate-100">
-                        <h4 class="font-bold text-bcgGreen uppercase text-xs tracking-widest mb-4">Awards & Recognition</h4>
-                        <ul class="text-xs space-y-3 text-slate-600 font-medium">
-                            <li>• CBRE SPOT Award: High-impact delivery & global coordination</li>
-                            <li>• AM/NS Recognition for RPA Automation Innovation</li>
-                            <li>• HP Life Ambassador & Dale Carnegie Digital Leadership Badge</li>
-                            <li>• ICCE & UNFCCC Green (R)evolution Global Certification</li>
-                            <li>• National Service Scheme (NSS) Certification</li>
-                            <li>• Army National Cadet Corps (NCC) Certification</li>
-                        </ul>
-                    </div>
-
-                    <div class="card-hover p-6 bg-white border border-slate-100">
-                        <h4 class="font-bold text-bcgGreen uppercase text-xs tracking-widest mb-4">Workshops & Global Forums</h4>
-                        <div class="grid grid-cols-1 gap-3 text-[10px] text-slate-600 font-bold uppercase tracking-wider">
-                            <p><i class="fas fa-globe text-bcgGold mr-2"></i> HYSEA - Digital Customer Experience (Wells Fargo) - Hyderabad, 2025</p>
-                            <p><i class="fas fa-globe text-bcgGold mr-2"></i> Luxembourg Data Summit - Luxembourg, 2023</p>
-                            <p><i class="fas fa-globe text-bcgGold mr-2"></i> IBCL Knowledge & Technology Partnership (EY) - Luxembourg, 2023</p>
-                            <p><i class="fas fa-globe text-bcgGold mr-2"></i> Agile Business Conference (QRP International) - Luxembourg, 2023</p>
-                            <p><i class="fas fa-globe text-bcgGold mr-2"></i> BFSI Insight Summit - Mumbai, 2022</p>
-                            <p><i class="fas fa-globe text-bcgGold mr-2"></i> Climate Reality Leadership Corps - USA (Online), 2020</p>
-                            <p><i class="fas fa-globe text-bcgGold mr-2"></i> I&ESC Conference - IIT Delhi, 2018</p>
-                            <p><i class="fas fa-globe text-bcgGold mr-2"></i> TEDx - Agra, 2017</p>
-                            <p><i class="fas fa-globe text-bcgGold mr-2"></i> Texas Instruments Hackathon - Agra, 2016</p>
-                        </div>
-                    </div>
+                <div class="space-y-6">
+                    <h4 class="font-bold text-bcgGold uppercase text-xs tracking-widest">Leadership Roles</h4>
+                    <ul class="text-xs space-y-2 text-slate-600">
+                        <li>• Placement Coordinator (MBA): 117 students</li>
+                        <li>• Class Representative (BBA & MBA): 2015–2020</li>
+                        <li>• Event Lead: EPIC 2019 Tech Mahindra</li>
+                        <li>• Career Expedition & Alumni Meet Lead</li>
+                        <li>• 6 FTE & INR 30L Automation Delivery</li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h4 class="font-bold text-bcgGold uppercase text-xs tracking-widest">Conferences & Forums</h4>
+                    <ul class="text-xs space-y-2 text-slate-600">
+                        <li>• HYSEA Digital Customer Experience (Wells Fargo) 2025</li>
+                        <li>• Luxembourg Data Summit 2023</li>
+                        <li>• IBCL Technology Partnership (EY) 2023</li>
+                        <li>• Agile Business Conference (QRP) 2023</li>
+                        <li>• BFSI Insight Summit (Mumbai) 2022</li>
+                        <li>• Climate Reality Leadership (USA/Online) 2020</li>
+                        <li>• I&ESC (IIT Delhi) 2018 | TEDx Agra 2017</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 bg-bcgGreen text-white">
-        <div class="max-w-7xl mx-auto px-8 text-center">
-            <h2 class="section-heading text-3xl mb-8 italic">Strategizing Excellence.</h2>
-            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-12">
-                <a href="mailto:saurabhsrivastav.db@gmail.com" class="text-bcgGold hover:text-white transition"><i class="fas fa-envelope mr-2"></i> saurabhsrivastav.db@gmail.com</a>
-                <span class="hidden md:inline text-white/20">|</span>
-                <a href="tel:+917786803262" class="text-bcgGold hover:text-white transition"><i class="fas fa-phone mr-2"></i> +91 7786803262</a>
-                <a href="https://www.linkedin.com/in/saurabh-srivastav-in/" target="_blank" class="text-bcgGold hover:text-white transition"><i class="fab fa-linkedin mr-2"></i> LinkedIn</a>
-            </div>
-            <div class="pt-8 border-t border-white/10 text-xs tracking-[0.3em] text-white/40 uppercase font-bold">
-                © 2026 Saurabh Srivastav — Global Business Analyst.
+    <footer class="py-12 bg-bcgGreen text-white text-center">
+        <div class="max-w-7xl mx-auto px-8">
+            <p class="text-[10px] tracking-[0.4em] uppercase opacity-50 mb-4">Strategizing Excellence © 2026 Saurabh Srivastav</p>
+            <div class="flex justify-center space-x-6 text-bcgGold">
+                <a href="https://www.linkedin.com/in/saurabh-srivastav-in/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/saurabhsrivastav-in" target="_blank"><i class="fab fa-github"></i></a>
             </div>
         </div>
     </footer>
