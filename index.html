@@ -3,115 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saurabh Srivastav | Product Manager</title>
+    <title>Saurabh Srivastav | Strategy & Product</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bcgGreen: '#004533',
+                        bcgLightGreen: '#00694d',
+                        bcgBeige: '#f9f8f6',
+                        bcgGold: '#9e8b56'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .nav-link:hover { color: #3b82f6; transition: 0.3s; }
-        .skill-bar { height: 8px; border-radius: 4px; background: #e2e8f0; position: relative; }
-        .skill-progress { height: 100%; border-radius: 4px; background: #3b82f6; }
-        .project-card:hover { transform: translateY(-5px); transition: 0.3s; }
-        header { backdrop-filter: blur(10px); }
+        .bcg-gradient { background: linear-gradient(135deg, #004533 0%, #002b20 100%); }
+        .section-heading { font-family: 'Playfair Display', serif; }
+        .nav-link { position: relative; transition: 0.3s; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: #9e8b56; transition: 0.3s; }
+        .nav-link:hover::after { width: 100%; }
+        .card-hover { transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-color: #004533; }
+        header { backdrop-filter: blur(12px); }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-bcgBeige text-slate-900">
 
-    <header class="fixed top-0 w-full z-50 bg-white/80 border-b border-slate-200">
-        <nav class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold tracking-tight">SS.</span>
-            <div class="space-x-8 font-medium text-sm uppercase tracking-widest">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#portfolio" class="nav-link">Portfolio</a>
+    <header class="fixed top-0 w-full z-50 bg-white/90 border-b border-slate-200">
+        <nav class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-bcgGreen flex items-center justify-center text-white font-bold text-xs">SS</div>
+                <span class="text-xl font-bold tracking-tighter text-bcgGreen section-heading uppercase">Saurabh Srivastav</span>
             </div>
+            <div class="hidden md:flex space-x-10 font-medium text-xs uppercase tracking-[0.2em] text-slate-600">
+                <a href="#home" class="nav-link hover:text-bcgGreen">Executive Summary</a>
+                <a href="#about" class="nav-link hover:text-bcgGreen">Experience</a>
+                <a href="#skills" class="nav-link hover:text-bcgGreen">Capabilities</a>
+                <a href="#portfolio" class="nav-link hover:text-bcgGreen">Case Studies</a>
+            </div>
+            <a href="mailto:contact@example.com" class="hidden md:block border border-bcgGreen text-bcgGreen px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-bcgGreen hover:text-white transition">Get in Touch</a>
         </nav>
     </header>
 
-    <section id="home" class="h-screen flex items-center justify-center text-center px-6">
-        <div>
-            <h1 class="text-6xl font-extrabold mb-4 text-slate-900">Saurabh Srivastav</h1>
-            <p class="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
-                Product Manager specializing in AI-driven solutions and operational strategy.
-            </p>
-            <a href="#about" class="bg-slate-900 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-600 transition">Explore My Work</a>
+    <section id="home" class="min-h-screen flex items-center pt-20 bcg-gradient text-white relative overflow-hidden">
+        <div class="absolute right-0 bottom-0 opacity-10 pointer-events-none">
+            <i class="fas fa-chart-pie text-[40rem] -mr-40 -mb-40 text-white"></i>
         </div>
-    </section>
-
-    <section id="about" class="py-24 bg-white px-6">
-        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div class="bg-slate-200 aspect-square rounded-2xl overflow-hidden">
-                <img src="https://via.placeholder.com/600" alt="Saurabh" class="w-full h-full object-cover">
-            </div>
+        <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-12 items-center">
             <div>
-                <h2 class="text-3xl font-bold mb-6">About Me</h2>
-                <p class="text-slate-600 leading-relaxed mb-6">
-                    I am a strategic thinker focused on bridging the gap between technical complexity and business value. With a background in Product Management, I thrive in environments that require high-level roadmap planning alongside deep-dive technical problem solving.
+                <h2 class="text-bcgGold font-bold uppercase tracking-[0.3em] text-sm mb-4">Strategic Insights & Product</h2>
+                <h1 class="text-5xl md:text-7xl section-heading mb-6 leading-tight">
+                    Driving value through <span class="italic">AI-augmented</span> strategy.
+                </h1>
+                <p class="text-xl text-slate-300 mb-10 max-w-lg leading-relaxed font-light">
+                    Business Analyst & Product Manager focused on bridging technical complexity with executive-level business value.
                 </p>
+                <div class="flex space-x-6">
+                    <a href="#portfolio" class="bg-bcgGold text-white px-10 py-4 font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-bcgGreen transition shadow-lg">View Case Studies</a>
+                    <a href="#about" class="border border-white/30 text-white px-10 py-4 font-bold uppercase text-xs tracking-widest hover:bg-white/10 transition">The Approach</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-12 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-8 flex flex-wrap justify-between gap-8 opacity-60 grayscale">
+            <span class="font-bold text-xl tracking-widest italic">COPILOT</span>
+            <span class="font-bold text-xl tracking-widest italic">GEMINI</span>
+            <span class="font-bold text-xl tracking-widest italic">CHATGPT</span>
+            <span class="font-bold text-xl tracking-widest italic">AGILE</span>
+            <span class="font-bold text-xl tracking-widest italic">STRATEGY</span>
+        </div>
+    </section>
+
+    <section id="about" class="py-32 px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-12 gap-16 items-start">
+                <div class="md:col-span-5">
+                    <h2 class="text-4xl section-heading mb-8 text-bcgGreen leading-tight">Bridging the gap between technical logic and business impact.</h2>
+                    <div class="w-20 h-1 bg-bcgGold mb-8"></div>
+                    <p class="text-slate-600 leading-relaxed mb-8 text-lg">
+                        With a deep focus on <strong>AI-driven solutions</strong> and <strong>Operational Strategy</strong>, I specialize in transforming complex data into actionable roadmaps. 
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-bcgGreen hover:text-bcgGold transition text-xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-bcgGreen hover:text-bcgGold transition text-xl"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="md:col-span-7 grid grid-cols-1 gap-8">
+                    <div class="bg-white p-8 border-l-4 border-bcgGreen shadow-sm">
+                        <h4 class="font-bold uppercase text-xs tracking-widest text-bcgGold mb-2">Philosophy</h4>
+                        <p class="text-slate-700 italic font-serif text-xl">"Complexity is the enemy of execution. My role is to distill technical potential into measurable business growth."</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-white border border-slate-100 shadow-sm">
+                            <i class="fas fa-microchip text-bcgGreen text-2xl mb-4"></i>
+                            <h3 class="font-bold mb-2">AI Integration</h3>
+                            <p class="text-sm text-slate-500">Expert usage of Gemini & Copilot to accelerate product lifecycles.</p>
+                        </div>
+                        <div class="p-6 bg-white border border-slate-100 shadow-sm">
+                            <i class="fas fa-chess-knight text-bcgGreen text-2xl mb-4"></i>
+                            <h3 class="font-bold mb-2">Strategy</h3>
+                            <p class="text-sm text-slate-500">Developing roadmaps that align technical debt with ROI goals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-32 bg-bcgGreen text-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-bcgGold font-bold uppercase tracking-[0.3em] text-xs mb-4">Core Capabilities</h2>
+                <h3 class="text-4xl section-heading">Expertise in Execution</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-end border-b border-white/20 pb-2">
+                        <span class="text-lg font-medium">Product Strategy</span>
+                        <span class="text-bcgGold font-bold">95%</span>
+                    </div>
+                    <p class="text-sm text-white/60">Roadmapping, GTM strategy, and stakeholder alignment.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-end border-b border-white/20 pb-2">
+                        <span class="text-lg font-medium">AI & Prompt Engineering</span>
+                        <span class="text-bcgGold font-bold">90%</span>
+                    </div>
+                    <p class="text-sm text-white/60">Leveraging LLMs for business intelligence and automation.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-end border-b border-white/20 pb-2">
+                        <span class="text-lg font-medium">Data Analytics</span>
+                        <span class="text-bcgGold font-bold">92%</span>
+                    </div>
+                    <p class="text-sm text-white/60">Turning raw metrics into executive-ready insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-32 px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-16">
+                <div>
+                    <h2 class="text-bcgGold font-bold uppercase tracking-[0.3em] text-xs mb-4">Portfolio</h2>
+                    <h3 class="text-4xl section-heading text-bcgGreen">Strategic Engagements</h3>
+                </div>
+                <a href="#" class="text-bcgGreen font-bold uppercase text-xs tracking-widest border-b-2 border-bcgGold pb-1 hover:text-bcgGold transition">View All Work</a>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="card-hover group border border-slate-100 bg-bcgBeige/30 overflow-hidden cursor-pointer">
+                    <div class="p-12">
+                        <i class="fas fa-vault text-4xl text-bcgGold mb-6"></i>
+                        <h3 class="text-2xl section-heading mb-4 text-bcgGreen">Automated Treasury Logic</h3>
+                        <p class="text-slate-600 mb-8 leading-relaxed">Implementing a high-availability AI system for financial data reconciliation and risk radar. Reduced manual audit time by 40%.</p>
+                        <span class="text-xs font-bold uppercase tracking-widest text-bcgGreen group-hover:translate-x-2 inline-block transition-transform">Read Case Study <i class="fas fa-arrow-right ml-2"></i></span>
+                    </div>
+                </div>
+
+                <div class="card-hover group border border-slate-100 bg-bcgBeige/30 overflow-hidden cursor-pointer">
+                    <div class="p-12">
+                        <i class="fas fa-magnifying-glass-chart text-4xl text-bcgGold mb-6"></i>
+                        <h3 class="text-2xl section-heading mb-4 text-bcgGreen">Market Sentiment Engine</h3>
+                        <p class="text-slate-600 mb-8 leading-relaxed">Analyzing real-time financial news using NLP to predict liquidity shifts and FX exposure for enterprise clients.</p>
+                        <span class="text-xs font-bold uppercase tracking-widest text-bcgGreen group-hover:translate-x-2 inline-block transition-transform">Read Case Study <i class="fas fa-arrow-right ml-2"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 bg-bcgGreen text-white border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-3 gap-12">
+            <div>
+                <div class="flex items-center space-x-2 mb-6">
+                    <div class="w-8 h-8 bg-bcgGold flex items-center justify-center text-bcgGreen font-bold text-xs">SS</div>
+                    <span class="text-xl font-bold section-heading uppercase tracking-tighter">Saurabh Srivastav</span>
+                </div>
+                <p class="text-white/50 text-sm leading-relaxed">
+                    Senior Business Analyst & Product Leader specializing in the intersection of Finance and AI technology.
+                </p>
+            </div>
+            <div class="md:ml-auto">
+                <h4 class="font-bold text-bcgGold uppercase text-xs tracking-widest mb-6">Navigation</h4>
+                <ul class="space-y-4 text-sm text-white/70">
+                    <li><a href="#" class="hover:text-white transition">Capabilities</a></li>
+                    <li><a href="#" class="hover:text-white transition">Experience</a></li>
+                    <li><a href="#" class="hover:text-white transition">Insights</a></li>
+                </ul>
+            </div>
+            <div class="md:ml-auto">
+                <h4 class="font-bold text-bcgGold uppercase text-xs tracking-widest mb-6">Connect</h4>
+                <p class="text-sm text-white/70 mb-4">Bengaluru, India / Remote</p>
                 <div class="flex space-x-4">
-                    <a href="https://linkedin.com/in/saurabh-srivastav-in" class="text-2xl text-slate-400 hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/saurabhsrivastav-in" class="text-2xl text-slate-400 hover:text-slate-900"><i class="fab fa-github"></i></a>
+                    <a href="#" class="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-bcgGold transition"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-bcgGold transition"><i class="fab fa-github"></i></a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section id="skills" class="py-24 bg-slate-50 px-6">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center">Core Competencies</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <div class="flex justify-between mb-2 font-semibold"><span>Product Strategy</span><span>95%</span></div>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
-                </div>
-                <div>
-                    <div class="flex justify-between mb-2 font-semibold"><span>AI / Machine Learning</span><span>85%</span></div>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-                </div>
-                <div>
-                    <div class="flex justify-between mb-2 font-semibold"><span>Data Analytics</span><span>90%</span></div>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
-                </div>
-                <div>
-                    <div class="flex justify-between mb-2 font-semibold"><span>Agile Methodology</span><span>92%</span></div>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 92%"></div></div>
-                </div>
-            </div>
+        <div class="max-w-7xl mx-auto px-8 mt-20 pt-8 border-t border-white/10 text-center text-xs text-white/30 tracking-widest uppercase font-bold">
+            © 2026 Saurabh Srivastav — Built for Impact.
         </div>
-    </section>
-
-    <section id="portfolio" class="py-24 bg-white px-6">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="project-card border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-sm">
-                    <div class="h-48 bg-slate-100 p-8 flex items-center justify-center">
-                        <i class="fas fa-robot text-5xl text-blue-500"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2">Automated Treasury Logic</h3>
-                        <p class="text-slate-600 text-sm mb-4">A high-availability AI system for financial data reconciliation and risk radar.</p>
-                        <a href="#" class="text-blue-600 font-bold hover:underline">View Case Study →</a>
-                    </div>
-                </div>
-                <div class="project-card border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-sm">
-                    <div class="h-48 bg-slate-100 p-8 flex items-center justify-center">
-                        <i class="fas fa-chart-line text-5xl text-green-500"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2">Market Sentiment Engine</h3>
-                        <p class="text-slate-600 text-sm mb-4">Analyzing real-time financial news to predict liquidity shifts and FX exposure.</p>
-                        <a href="#" class="text-blue-600 font-bold hover:underline">View Case Study →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-12 bg-slate-900 text-slate-400 text-center text-sm">
-        <p>© 2026 Saurabh Srivastav. Built with precision and automation.</p>
     </footer>
 
 </body>
